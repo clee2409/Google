@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity implements JsonUtils.OKHttpH
         mFragmentManager = getSupportFragmentManager();
         mRedditCardDetailFragment = new RedditCardDetailFragment();
 
-
-        JsonUtils.fetchRawJson(this, frontpageUrl);
-
         mRecyclerView = findViewById(R.id.reddit_rv);
 
     }
