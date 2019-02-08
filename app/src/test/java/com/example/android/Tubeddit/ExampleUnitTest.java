@@ -1,4 +1,4 @@
-package com.example.android.faceddit;
+package com.example.android.Tubeddit;
 
 import org.junit.Test;
 
