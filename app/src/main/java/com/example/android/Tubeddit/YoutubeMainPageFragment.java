@@ -28,7 +28,7 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class YoutubeMainPageFragment extends Fragment implements NetworkingUtils.OKHttpHandler.AsyncResponse{
+public class YoutubeMainPageFragment extends Fragment implements NetworkingUtils.OKHttpHandler.AsyncResponse {
 
     private String youtubeMostPopularVidsUrl = "https://www.googleapis.com/youtube/v3/videos" +
             "?part=snippet&maxResults=25&chart=mostPopular&key=AIzaSyD0c6zzMUaBltdZCQ-GJYjdZKodBL74BxQ";
@@ -66,6 +66,7 @@ public class YoutubeMainPageFragment extends Fragment implements NetworkingUtils
         recyclerView.setLayoutManager(linearLayoutManager);
         YoutubeMainPageFragment.Adapter adapter = new YoutubeMainPageFragment.Adapter(resultList);
         recyclerView.setAdapter(adapter);
+
     }
 
     public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {

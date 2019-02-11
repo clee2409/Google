@@ -23,7 +23,7 @@ import com.example.android.Tubeddit.utils.NetworkingUtils;
 import org.json.JSONException;
 import org.parceler.Parcels;
 
-public class RedditCardDetailFragment extends Fragment implements NetworkingUtils.OKHttpHandler.AsyncResponse{
+public class RedditCardDetailFragment extends Fragment implements NetworkingUtils.OKHttpHandler.AsyncResponse {
 
     private static String EXTRA_PERMALINK = "Extra Permalink";
     private OnFragmentInteractionListener mListener;

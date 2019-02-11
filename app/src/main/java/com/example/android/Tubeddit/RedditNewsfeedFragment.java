@@ -1,6 +1,8 @@
 package com.example.android.Tubeddit;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,14 +26,22 @@ import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-import static com.example.android.Tubeddit.MainActivity.frontpageUrl;
+import okhttp3.Call;
+import okhttp3.Response;
+
+import static com.example.android.Tubeddit.MainActivity.SHARED_PREFERENCES_REDDIT_AUTH_CODE;
 
 public class RedditNewsfeedFragment extends Fragment implements NetworkingUtils.OKHttpHandler.AsyncResponse {
 
     private RecyclerView mRecyclerView;
     private SwipeRefreshLayout mSwipeRefreshLayout;
+
+    private SharedPreferences mSharedPreferences;
+    private Boolean mIsAuthenticated;
+    private String mAuthCode;
 
     public RedditNewsfeedFragment() {
         // Required empty public constructor
@@ -40,6 +50,10 @@ public class RedditNewsfeedFragment extends Fragment implements NetworkingUtils.
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mSharedPreferences = getActivity()
+                .getSharedPreferences(MainActivity.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
+        mIsAuthenticated = mSharedPreferences.contains(MainActivity.SHARED_PREFERENCES_REDDIT_AUTH_CODE);
+        if (mIsAuthenticated) mAuthCode = mSharedPreferences.getString(SHARED_PREFERENCES_REDDIT_AUTH_CODE, null);
     }
 
     @Override
@@ -53,7 +67,49 @@ public class RedditNewsfeedFragment extends Fragment implements NetworkingUtils.
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         mRecyclerView = getView().findViewById(R.id.reddit_rv);
-        NetworkingUtils.get(this, frontpageUrl);
+
+        String loggedInFrontPageUrl = "https://oauth.reddit.com/";
+        String defaultFrontPageUrl = "https://reddit.com/";
+
+        if (mIsAuthenticated) {
+            NetworkingUtils.newFetch(loggedInFrontPageUrl, mAuthCode, new okhttp3.Callback() {
+                @Override
+                public void onFailure(Call call, IOException e) {
+                    e.printStackTrace();
+                }
+
+                @Override
+                public void onResponse(Call call, final Response response) throws IOException {
+                    getActivity().runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                bindFrontPageUi(response.body().string());
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        else NetworkingUtils.get(this, defaultFrontPageUrl);
+
+    }
+
+    private void bindFrontPageUi(String json) {
+        ArrayList<RedditCard> redditCardArrayList = null;
+
+        try {
+            redditCardArrayList = JsonUtils.parseRedditCards(json);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
+        mRecyclerView.setLayoutManager(linearLayoutManager);
+        RedditNewsfeedFragment.Adapter adapter = new RedditNewsfeedFragment.Adapter(redditCardArrayList);
+        mRecyclerView.setAdapter(adapter);
     }
 
     @Override
@@ -70,6 +126,7 @@ public class RedditNewsfeedFragment extends Fragment implements NetworkingUtils.
         mRecyclerView.setLayoutManager(linearLayoutManager);
         RedditNewsfeedFragment.Adapter adapter = new RedditNewsfeedFragment.Adapter(redditCardArrayList);
         mRecyclerView.setAdapter(adapter);
+
     }
 
     private class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {

@@ -28,7 +28,7 @@ import org.parceler.Parcels;
 
 import java.util.ArrayList;
 
-public class YoutubeVideoDetailActivity extends YouTubeBaseActivity implements NetworkingUtils.OKHttpHandler.AsyncResponse{
+public class YoutubeVideoDetailActivity extends YouTubeBaseActivity implements NetworkingUtils.OKHttpHandler.AsyncResponse {
 
     public static String EXTRA_YOUTUBE_VIDEO_DATA = "Bundle Key Containing Url";
     private YoutubeVideo mYoutubeVideo;
@@ -87,6 +87,7 @@ public class YoutubeVideoDetailActivity extends YouTubeBaseActivity implements N
         recyclerView.setLayoutManager(linearLayoutManager);
         Adapter adapter = new Adapter(resultCommentList);
         recyclerView.setAdapter(adapter);
+
     }
 
     private class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
