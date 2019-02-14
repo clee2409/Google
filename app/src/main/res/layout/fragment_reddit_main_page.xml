@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".RedditMainPageFragment"
+             android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Platinum">
+
+        <Spinner
+            android:layout_gravity="start|center"
+            android:id="@+id/reddit_sort_by_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/actionBarSize"
+            android:spinnerMode="dropdown"
+            android:padding="16dp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/reddit_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="2dp"
+        android:clipToPadding="false"
+        android:outlineProvider="bounds">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

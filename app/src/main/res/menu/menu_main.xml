@@ -9,7 +9,7 @@
 
     <item
         android:id="@+id/menu_action_select_youtube"
-        android:title="Facebook"></item>
+        android:title="Youtube"></item>
 
     <item
         android:id="@+id/menu_action_refresh"

@@ -1,11 +1,17 @@
 <resources>
     <string name="app_name">Tubeddit</string>
 
+    <string name="replies">Replies</string>
 
-    <string name="facebook_app_id">1247752188699184</string>
+    <string-array name="reddit_sort_by_array">
+        <item>Hot</item>
+        <item>New</item>
+        <item>Top</item>
+        <item>Controversial</item>
+    </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="replies">Replies</string>
+
 
 </resources>
