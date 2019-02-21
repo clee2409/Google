@@ -16,16 +16,16 @@
             android:id="@+id/reddit_title_tv"/>
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/reddit_subreddit_tv"/>
+            android:id="@+id/reddit_subreddit_tv"
+            android:padding="16dp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:scaleType="fitXY"
             android:id="@+id/reddit_thumbnailUrl_iv"/>
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -35,10 +35,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/reddit_author_tv"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
 
     </LinearLayout>
 

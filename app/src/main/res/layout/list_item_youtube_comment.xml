@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- List item for YoutubeVideoDetailActivity's Adapter for displaying Youtube Comments
-    As well as list item for YoutubeCommentRepliesFragment's Adapter for displaying Replies to Yotutube Comments
+<!-- List item for YoutubeVideoDetailActivity's RedditCardAdapter for displaying Youtube Comments
+    As well as list item for YoutubeCommentRepliesFragment's RedditCardAdapter for displaying Replies to Yotutube Comments
 
     Youtube Comment Replies do not have a reply count nor can replies be viewed,
     thus the replycount Textview and view replies button is programatically removed on creation
