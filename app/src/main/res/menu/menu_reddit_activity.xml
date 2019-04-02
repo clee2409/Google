@@ -3,15 +3,6 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/menu_action_select_reddit"
-        android:title="Reddit"
-        ></item>
-
-    <item
-        android:id="@+id/menu_action_select_youtube"
-        android:title="Youtube"></item>
-
-    <item
         android:id="@+id/menu_action_refresh"
         android:title="Refresh"
         app:showAsAction="always"
@@ -25,5 +16,27 @@
         android:icon="@drawable/ic_action_search"
         app:actionViewClass="android.support.v7.widget.SearchView">
     </item>
+
+    <item
+        android:id="@+id/menu_action_toggle_reddit_or_youtube"
+        app:showAsAction="always"
+        android:icon="@drawable/banana"
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/menu_action_select_reddit"
+                android:icon="@drawable/reddit_icon"
+                android:title="Reddit"/>
+
+            <item
+                android:id="@+id/menu_action_select_youtube"
+                android:title="Youtube"
+                android:icon="@drawable/youtube_icon">
+            </item>
+
+        </menu>
+
+    </item>
+
 
 </menu>

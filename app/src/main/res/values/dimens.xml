@@ -4,4 +4,8 @@
     <dimen name="button_size">24dp</dimen>
     <dimen name="button_container_size">48dp</dimen>
     <dimen name="thumbnail_size">75dp</dimen>
+    <dimen name="slim_margins">8dp</dimen>
+    <dimen name="tiny_font">12sp</dimen>
+    <dimen name="bigger_text_size">16sp</dimen>
+    <dimen name="icon_medium_size">36dp</dimen>
 </resources>

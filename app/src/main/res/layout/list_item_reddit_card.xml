@@ -1,41 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:id="@+id/reddit_card">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reddit_title_tv"/>
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/slim_margins"
+        android:layout_marginStart="@dimen/sides_margin"
+        android:layout_marginLeft="@dimen/sides_margin"
+        android:layout_marginEnd="@dimen/sides_margin">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/reddit_subreddit_tv"
-            android:padding="16dp"/>
+            android:id="@+id/reddit_subreddit_tv"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reddit_time_since_created_tv"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/reddit_author_tv"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reddit_title_tv"
+            android:textSize="@dimen/bigger_text_size"
+            android:textColor="@color/Black"
+            android:layout_marginBottom="8dp"/>
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:scaleType="fitXY"
             android:id="@+id/reddit_thumbnailUrl_iv"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reddit_score_tv"/>
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/reddit_author_tv"/>
-
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="fitXY"
+        android:id="@+id/reddit_preview_url_iv"/>
+
+    <include layout="@layout/reusable_reddit_like_comment"/>
+
+</LinearLayout>

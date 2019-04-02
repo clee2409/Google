@@ -9,6 +9,10 @@
             android:id="@+id/reddit_profile"
             android:title="Profile"></item>
 
+        <item
+            android:id="@+id/reddit_inbox"
+            android:title="Inbox"></item>
+
     </group>
 </menu>
 

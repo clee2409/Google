@@ -1,52 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:id="@+id/reddit_card_detail_toolbar"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-    </android.support.v7.widget.Toolbar>
+        <include layout="@layout/toolbar_main"></include>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/redditcard_detail_title_tv"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/redditcard_detail_subreddit_tv"
+            android:textSize="@dimen/bigger_text_size"
+            android:textColor="@color/Black"
+            android:layout_marginTop="@dimen/slim_margins"
+            android:layout_marginStart="@dimen/bigger_text_size"
+            android:layout_marginLeft="@dimen/bigger_text_size"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/redditcard_detail_subreddit_tv"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/sides_margin"
+            android:layout_marginLeft="@dimen/sides_margin"
+            android:layout_marginEnd="@dimen/sides_margin">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/redditcard_detail_thumbnailUrl_tv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redditcard_detail_author_tv"
+                android:layout_marginRight="@dimen/slim_margins"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/redditcard_detail_score_tv"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redditcard_detail_time_since_posted_tv"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/redditcard_detail_author_tv"/>
+            <ImageView
+                android:layout_width="@dimen/tiny_font"
+                android:layout_height="@dimen/tiny_font"
+                android:id="@+id/reddit_card_gold_iv"
+                android:visibility="gone"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/reddit_comments_rv">
+        </LinearLayout>
 
-    </android.support.v7.widget.RecyclerView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redditcard_detail_upvote_ratio_tv"
+            android:layout_marginStart="@dimen/sides_margin"
+            android:layout_marginLeft="@dimen/sides_margin"
+            android:layout_marginBottom="@dimen/slim_margins"/>
 
-</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bigger_text_size"
+            android:textColor="@color/Black"
+            android:id="@+id/redditcard_detail_title_tv"
+            android:layout_marginStart="@dimen/sides_margin"
+            android:layout_marginBottom="@dimen/slim_margins"
+            android:layout_marginEnd="@dimen/sides_margin"
+            android:layout_marginLeft="@dimen/sides_margin"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:id="@+id/reddit_card_detail_picture_iv"/>
+
+        <include layout="@layout/reusable_reddit_like_comment"/>
+
+        <View android:background="#ffffff"
+              android:layout_width = "match_parent"
+              android:layout_height="1dp"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reddit_comments_rv"
+            android:nestedScrollingEnabled="false">
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

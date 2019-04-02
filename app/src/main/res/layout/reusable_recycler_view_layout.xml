@@ -4,14 +4,16 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <!--
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/test_tv"/>
+        -->
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/reddit_search_results_rv"
+        android:id="@+id/reusable_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 

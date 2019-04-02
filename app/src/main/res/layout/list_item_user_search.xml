@@ -3,15 +3,25 @@
               android:orientation="horizontal"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-    android:weightSum="1">
+              android:weightSum="1"
+              android:layout_marginStart="@dimen/sides_margin"
+              android:layout_marginLeft="@dimen/sides_margin"
+              android:layout_marginEnd="@dimen/sides_margin">
+
+    <ImageView
+        android:layout_width="@dimen/thumbnail_size"
+        android:layout_height="@dimen/thumbnail_size"
+        android:scaleType="fitXY"
+        android:id="@+id/user_search_result_icon_iv"
+        android:layout_marginRight="@dimen/slim_margins"
+        android:layout_marginEnd="@dimen/slim_margins"
+        android:layout_gravity="center"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="1"
-        android:layout_marginStart="@dimen/sides_margin"
-        android:layout_marginLeft="@dimen/sides_margin">
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -34,14 +44,5 @@
             android:id="@+id/user_search_result_karma_count_tv"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:layout_width="@dimen/thumbnail_size"
-        android:layout_height="@dimen/thumbnail_size"
-        android:scaleType="fitXY"
-        android:id="@+id/user_search_result_icon_iv"
-        android:layout_marginRight="@dimen/sides_margin"
-        android:layout_marginEnd="@dimen/sides_margin"
-        android:layout_gravity="center"/>
 
 </LinearLayout>

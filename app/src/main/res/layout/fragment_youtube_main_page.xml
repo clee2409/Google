@@ -8,6 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <!-- Holds list_item_youtube_video -->
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

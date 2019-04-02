@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:layout_width="@dimen/bigger_text_size"
+            android:layout_height="@dimen/bigger_text_size"
+            android:src="@drawable/ic_action_up"
+            android:layout_marginRight="@dimen/sides_margin"
+            android:layout_marginEnd="@dimen/sides_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reddit_score_tv"
+            android:textSize="@dimen/bigger_text_size"/>
+
+        <ImageButton
+            android:layout_width="@dimen/bigger_text_size"
+            android:layout_height="@dimen/bigger_text_size"
+            android:src="@drawable/ic_action_down"
+            android:layout_marginLeft="@dimen/sides_margin"
+            android:layout_marginStart="@dimen/sides_margin"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/bigger_text_size"
+            android:layout_height="@dimen/bigger_text_size"
+            android:src="@drawable/comment_box"
+            android:layout_marginRight="@dimen/sides_margin"
+            android:layout_marginEnd="@dimen/sides_margin"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bigger_text_size"
+            android:id="@+id/reddit_card_comment_count_tv"/>
+
+        <View
+            android:layout_marginStart="@dimen/sides_margin"
+            android:layout_width="@dimen/sides_margin"
+            android:layout_height="@dimen/sides_margin"
+            android:layout_marginLeft="@dimen/sides_margin"/>
+
+    </LinearLayout>
+</LinearLayout>

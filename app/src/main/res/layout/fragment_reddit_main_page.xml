@@ -6,10 +6,10 @@
               tools:context=".RedditMainPageFragment"
               android:orientation="vertical">
 
-    <include layout="@layout/spinner_and_toggle"> </include>
+    <include layout="@layout/reusable_reddit_spinner_and_toggle"> </include>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/reddit_rv"
+        android:id="@+id/reddit_card_feed_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:elevation="2dp"
