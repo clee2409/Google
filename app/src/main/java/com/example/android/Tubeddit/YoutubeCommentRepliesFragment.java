@@ -65,9 +65,12 @@ public class YoutubeCommentRepliesFragment extends android.app.Fragment implemen
         view.findViewById(R.id.youtube_replies_action_close_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /*
                 getFragmentManager().beginTransaction()
                         .remove(getFragmentManager().findFragmentById(R.id.youtube_video_detail_fragment_container))
                         .commit();
+                        */
+                getActivity().onBackPressed();
             }
         });
 

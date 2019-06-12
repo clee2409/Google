@@ -131,7 +131,7 @@ public class YoutubeVideoDetailActivity extends YouTubeBaseActivity implements N
         }
 
         @Override
-        public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
             holder.authorNameTextView.setText(mData.get(position).mAuthor);
             holder.bodyTextView.setText(mData.get(position).mText);
             holder.replyCountTextView.setText(mData.get(position).mReplyCount);
@@ -145,7 +145,7 @@ public class YoutubeVideoDetailActivity extends YouTubeBaseActivity implements N
                 @Override
                 public void onClick(View view) {
                     YoutubeCommentRepliesFragment fragment = YoutubeCommentRepliesFragment.newInstance(
-                            mData.get(position).mCommentId);
+                            mData.get(holder.getAdapterPosition()).mCommentId);
 
                     getFragmentManager().beginTransaction()
                             .setCustomAnimations(R.animator.slide_up, 0,0, R.animator.slide_down)
