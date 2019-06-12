@@ -3,7 +3,7 @@
 <!-- List item for YoutubeVideoDetailActivity's RedditCardAdapter for displaying Youtube Comments
     As well as list item for YoutubeCommentRepliesFragment's RedditCardAdapter for displaying Replies to Yotutube Comments
 
-    Youtube Comment Replies do not have a reply count nor can replies be viewed,
+    Youtube Comment Replies do not have a replyOrComment count nor can replies be viewed,
     thus the replycount Textview and view replies button is programatically removed on creation
 -->
 
@@ -46,7 +46,8 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/youtube_comment_profile_image_iv"/>
+        android:id="@+id/youtube_comment_profile_image_iv"
+        android:contentDescription="@string/user_profile_image"/>
 
     <Button
         android:layout_width="wrap_content"

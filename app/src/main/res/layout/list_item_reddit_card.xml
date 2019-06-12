@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:id="@+id/reddit_card">
 
@@ -18,7 +19,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/reddit_subreddit_tv"/>
+            android:id="@+id/reddit_subreddit_tv"
+            android:textSize="@dimen/bigger_text_size"
+            android:textColor="@color/Hyper_Link_Blue"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -34,6 +37,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/bigger_text_size"
+                android:textColor="@color/Hyper_Link_Blue"
                 android:id="@+id/reddit_author_tv"/>
 
         </LinearLayout>
@@ -50,15 +55,25 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:scaleType="fitXY"
-            android:id="@+id/reddit_thumbnailUrl_iv"/>
+            android:id="@+id/reddit_thumbnailUrl_iv"
+            android:contentDescription="@string/close"/>
     </LinearLayout>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="fitXY"
-        android:id="@+id/reddit_preview_url_iv"/>
+        android:id="@+id/reddit_preview_url_iv"
+        android:contentDescription="@string/preview_image"/>
 
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/reddit_card_video_player"
+        android:visibility="gone"
+        app:resize_mode="fit"
+        android:background="@color/Black">
+    </com.google.android.exoplayer2.ui.PlayerView>
     <include layout="@layout/reusable_reddit_like_comment"/>
 
 </LinearLayout>

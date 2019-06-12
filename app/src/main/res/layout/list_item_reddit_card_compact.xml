@@ -25,7 +25,8 @@
             android:id="@+id/reddit_thumbnailUrl_iv"
             android:layout_gravity="top"
             android:layout_marginRight="@dimen/slim_margins"
-            android:layout_marginEnd="@dimen/slim_margins"/>
+            android:layout_marginEnd="@dimen/slim_margins"
+            android:contentDescription="@string/thumbnail"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,10 +36,11 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/slim_margins">
+                android:orientation="horizontal">
 
                 <TextView
+                    android:textSize="@dimen/bigger_text_size"
+                    android:textColor="@color/Hyper_Link_Blue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/reddit_subreddit_tv"
@@ -50,11 +52,14 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/reddit_time_since_created_tv"/>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/reddit_author_tv"/>
             </LinearLayout>
+            <TextView
+                android:textSize="@dimen/bigger_text_size"
+                android:textColor="@color/Hyper_Link_Blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/reddit_author_tv"
+                android:layout_marginBottom="@dimen/slim_margins"/>
 
             <TextView
                 android:layout_width="match_parent"

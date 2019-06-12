@@ -15,7 +15,29 @@
         android:spinnerMode="dropdown"
         android:gravity="center"
         android:layout_marginStart="@dimen/sides_margin"
-        android:layout_marginLeft="@dimen/sides_margin"/>
+        android:layout_marginLeft="@dimen/sides_margin"
+        android:background="@null"/>
+
+    <Spinner
+        android:id="@+id/reddit_sort_by_time_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:spinnerMode="dropdown"
+        android:background="@null">
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/reddit_sort_by_location_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_size"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:spinnerMode="dropdown"
+        android:background="@null">
+    </Spinner>
+    
 
     <View
         android:layout_width="0dp"

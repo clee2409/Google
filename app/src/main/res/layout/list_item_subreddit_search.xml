@@ -2,12 +2,18 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/sides_margin"
+              android:layout_marginLeft="@dimen/sides_margin"
+              android:layout_marginEnd="@dimen/sides_margin">
 
     <TextView
         android:id="@+id/subreddit_search_subreddit_name_tv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/bigger_text_size"
+        />
 
     <TextView
         android:id="@+id/subreddit_search_subscriber_count_tv"

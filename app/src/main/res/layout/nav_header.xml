@@ -7,19 +7,31 @@
               android:padding="16dp"
               android:theme="@style/ThemeOverlay.AppCompat.Dark"
               android:orientation="vertical"
-              android:gravity="bottom">
+              android:gravity="bottom"
+                android:id="@+id/nav_header">
 
     <ImageView
         android:id="@+id/navigation_header_icon_iv"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:contentDescription="@string/user_profile_image"/>
 
     <TextView
         android:id="@+id/navigation_header_title_tv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Username"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:layout_marginTop="@dimen/slim_margins"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="@dimen/bigger_text_size"/>
+
+    <TextView
+        android:id="@+id/navigation_header_login_prompt_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/slim_margins"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:visibility="gone"
+        android:gravity="center"/>
 
 </LinearLayout>

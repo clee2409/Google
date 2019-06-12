@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/slim_margins">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/slim_margins">
+
+        <TextView
+            android:textSize="@dimen/bigger_text_size"
+            android:textColor="@color/Hyper_Link_Blue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reddit_comment_author_tv"
+            android:layout_marginRight="@dimen/slim_margins"
+            android:layout_marginEnd="@dimen/slim_margins"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/reddit_comment_time_tv"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reddit_comment_body_tv"
+        android:textColor="@color/Black"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/slim_margins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:src="@drawable/ic_action_up"
+            android:layout_marginRight="@dimen/sides_margin"
+            android:layout_marginEnd="@dimen/sides_margin"
+            android:id="@+id/reddit_comment_upvote_iv"
+            android:contentDescription="@string/upvote"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/bigger_text_size"
+            android:id="@+id/reddit_comment_score_tv"/>
+
+        <ImageView
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
+            android:src="@drawable/ic_action_down"
+            android:layout_marginLeft="@dimen/sides_margin"
+            android:layout_marginStart="@dimen/sides_margin"
+            android:id="@+id/reddit_comment_downvote_iv"
+            android:contentDescription="@string/downvote"/>
+
+        <TextView
+            android:layout_marginLeft="@dimen/sides_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reply"
+            android:textSize="@dimen/bigger_text_size"
+            android:id="@+id/reddit_comment_reply_tv"
+            android:layout_marginStart="@dimen/sides_margin"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reddit_comment_replies_rv">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

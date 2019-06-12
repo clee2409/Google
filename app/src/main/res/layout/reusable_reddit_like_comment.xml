@@ -15,11 +15,13 @@
         android:layout_weight="1">
 
         <ImageButton
-            android:layout_width="@dimen/bigger_text_size"
-            android:layout_height="@dimen/bigger_text_size"
+            android:id="@+id/reddit_card_upvote_iv"
             android:src="@drawable/ic_action_up"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
             android:layout_marginRight="@dimen/sides_margin"
-            android:layout_marginEnd="@dimen/sides_margin"/>
+            android:layout_marginEnd="@dimen/sides_margin"
+            android:contentDescription="@string/upvote"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -28,11 +30,13 @@
             android:textSize="@dimen/bigger_text_size"/>
 
         <ImageButton
-            android:layout_width="@dimen/bigger_text_size"
-            android:layout_height="@dimen/bigger_text_size"
-            android:src="@drawable/ic_action_down"
+            android:id="@+id/reddit_card_downvote_iv"
+            android:layout_width="@dimen/button_size"
+            android:layout_height="@dimen/button_size"
             android:layout_marginLeft="@dimen/sides_margin"
-            android:layout_marginStart="@dimen/sides_margin"/>
+            android:layout_marginStart="@dimen/sides_margin"
+            android:src="@drawable/ic_action_down"
+            android:contentDescription="@string/downvote"/>
 
     </LinearLayout>
 
@@ -48,7 +52,8 @@
             android:layout_height="@dimen/bigger_text_size"
             android:src="@drawable/comment_box"
             android:layout_marginRight="@dimen/sides_margin"
-            android:layout_marginEnd="@dimen/sides_margin"/>
+            android:layout_marginEnd="@dimen/sides_margin"
+            android:contentDescription="@string/dialog_comment_bubble"/>
 
         <TextView
             android:layout_width="wrap_content"

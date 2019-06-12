@@ -13,7 +13,8 @@
         android:layout_height="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/thumbnail"/>
 
     <ImageView
         android:id="@+id/youtube_card_channel_icon_image_iv"
@@ -23,7 +24,8 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/youtube_card_thumbnail_iv"/>
+        app:layout_constraintTop_toBottomOf="@+id/youtube_card_thumbnail_iv"
+        android:contentDescription="@string/channel_icon"/>
 
     <TextView
         android:id="@+id/youtube_card_title_tv"

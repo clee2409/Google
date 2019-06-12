@@ -2,6 +2,39 @@
     <string name="app_name">Tubeddit</string>
 
     <string name="replies">Replies</string>
+    <string name="widget_no_subreddit_error">Subreddit does not exist or has no content</string>
+    <string name="unable_to_get_location">Unable to get Location</string>
+    <string name="reddit_thumbnail">Reddit Thumbnail</string>
+    <string name="edit">Edit</string>
+    <string name="refresh">Refresh</string>
+    <string name="home">Home</string>
+    <string name="gold_gilding">Gold Gilding</string>
+    <string name="detail_picture">Detail Picture</string>
+    <string name="close">Close</string>
+    <string name="preview_image">Preview Image</string>
+    <string name="thumbnail">Thumbnail</string>
+    <string name="user_profile_image">User Profile Image</string>
+    <string name="upvote">Upvote</string>
+    <string name="downvote">Downvote</string>
+    <string name="dialog_comment_bubble">Dialog/Comment Bubble</string>
+    <string name="channel_icon">Channel Icon</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="profile">Profile</string>
+    <string name="inbox">Inbox</string>
+    <string name="search">Search</string>
+    <string name="reddit">Reddit</string>
+    <string name="youtube">Youtube</string>
+    <string name="reply">Reply</string>
+    <string name="error_no_intent">Error, no intent</string>
+    <string name="location_latitude_and_longitude">Location Latitude and Longitude:</string>
+    <string name="error">Error Occured</string>
+    <string name="home_page">Home Page</string>
+    <string name="subreddit_prefix">/r%1$s</string>
+    <string name="by_author">by %1%s</string>
+    <string name="guest">Guest</string>
+    <string name="login_prompt">Log in to view profile and inbox, reply, and comment</string>
 
     <string-array name="reddit_sort_by_array">
         <item>Hot</item>
@@ -10,8 +43,21 @@
         <item>Controversial</item>
     </string-array>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="reddit_sort_by_time_array">
+        <item>Past Hour</item>
+        <item>Past 24 Hours</item>
+        <item>Past Week</item>
+        <item>Past Month</item>
+        <item>Past Year</item>
+        <item>All Time</item>
+    </string-array>
 
+    <string-array name="reddit_sort_by_location_array">
+        <item>My Location</item>
+        <item>Everywhere</item>
+        <item>United States</item>
+        <item>United Kingdom</item>
+        <item>Japan</item>
+    </string-array>
 
 </resources>

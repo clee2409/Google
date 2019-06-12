@@ -5,8 +5,18 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <include layout="@layout/list_item_reddit_card_compact"/>
-    <include layout="@layout/list_item_reddit_comment"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="4dp">
+        <include layout="@layout/list_item_reddit_card_compact"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Platinum">
+        <include layout="@layout/list_item_reddit_comment"/>
+    </FrameLayout>
 
 
 </LinearLayout>

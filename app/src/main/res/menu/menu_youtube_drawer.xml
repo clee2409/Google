@@ -3,6 +3,6 @@
 
     <item
         android:id="@+id/youtube_log_in"
-        android:title="Log In"
+        android:title="@string/log_in"
         ></item>
 </menu>

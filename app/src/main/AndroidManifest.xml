@@ -13,16 +13,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".MainActivity" android:launchMode="singleTop">
+        <receiver android:name=".widget.RedditWidgetProvider">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
 
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/reddit_widget_info"/>
+        </receiver>
+
+        <service
+            android:name=".widget.ListViewService"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH"/>
             </intent-filter>
+
             <meta-data
                 android:name="android.app.default_searchable"
                 android:value=".MainActivity"/>
@@ -32,9 +49,7 @@
             <meta-data
                 android:name="com.google.android.gms.ads.APPLICATION_ID"
                 android:value="ca-app-pub-9010336558845846~5093922463"/>
-
         </activity>
-
         <activity android:name=".YoutubeVideoDetailActivity">
         </activity>
 
@@ -50,6 +65,12 @@
                 android:resource="@xml/searchable"/>
         </activity>
         -->
+        <activity android:name=".widget.WidgetDialogActivity"
+                  android:excludeFromRecents="true"
+                  android:launchMode="singleInstance"
+                  android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
+
     </application>
 
 </manifest>
